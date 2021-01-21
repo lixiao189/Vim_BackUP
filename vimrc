@@ -30,11 +30,13 @@ set expandtab
 set autoindent
 set cindent
 
-" Set theme for gvim
+" set theme
+set background=dark
+colorscheme solarized8
+set cul
+
+" Settings  for gvim
 if has("gui_running")
-  set cul " 开启当行高亮
   set lines=40 columns=120
-  set background=dark
-	set guifont=SF\ Mono\ Regular:h12
-	colorscheme solarized8
+  set guifont=SF\ Mono\ Regular:h12
 endif
