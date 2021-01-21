@@ -15,7 +15,8 @@ set cindent
 
 " Set theme for gvim
 if has("gui_running")
-	set background=dark
+  set lines=40 columns=120
+  set background=dark
 	set guifont=SF\ Mono\ Regular:h12
 	colorscheme solarized8
 endif
