@@ -4,10 +4,14 @@ syntax on
 " Manage your plugins here
 call plug#begin('~/.vim/plugged')
 Plug 'lifepillar/vim-solarized8'
-Plug 'prettier/vim-prettier'
 Plug 'ervandew/supertab'
 Plug 'scrooloose/syntastic'
+Plug 'chiel92/vim-autoformat'
 call plug#end()
+
+" set the auto-format
+noremap <C-f> :Autoformat<CR>
+au BufWrite * :Autoformat
 
 " set the syntax check plugin
 set statusline+=%#warningmsg#
