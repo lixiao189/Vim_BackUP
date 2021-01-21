@@ -1,9 +1,21 @@
 set nu
 syntax on
 
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ -x 127.0.0.1:50933 --insecure #set proxy
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+" Manage your plugins here
+call plug#begin('~/.vim/plugged')
+Plug 'lifepillar/vim-solarized8'
+call plug#end()
+
+" set indent
+set tabstop=2
+set softtabstop=2
+set expandtab
+set autoindent
+set cindent
+
+" Set theme for gvim
+if has("gui_running")
+	set background=dark
+	set guifont=SF\ Mono\ Regular:h12
+	colorscheme solarized8
 endif
