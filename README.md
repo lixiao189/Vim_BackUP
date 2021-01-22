@@ -8,11 +8,13 @@ If you are Mac OS user you need to install brew package manager first,
    ```
    node.js
    vim-plug
+   ccls
    ```
 ## How to use
    I use the vim-plug to manage all the plugins
 
-   Whe you want to use the config, move the folder to the ~/.vim folder to use
+   Whe you want to use the config, move the folder to the ~/.vim folder to use.
+
    If you want to update the plugin, you can use the vim command
 
    ```
@@ -24,3 +26,10 @@ If you are Mac OS user you need to install brew package manager first,
    ```
    :PlugUpgrade
    ```
+   Because there are some problems of the coc-ccls extension, so you need to run these command
+   after install all the extension.
+   ```
+   cd ~/.config/coc/extensions/node_modules/coc-ccls
+   ln -s node_modules/ws/lib lib
+   ```
+
