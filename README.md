@@ -16,6 +16,19 @@ If you are Mac OS user you need to install brew package manager first,
 
    Whe you want to use the config, move the folder to the ~/.vim folder to use.
 
+   if you want to install the missing plugins, you can just use
+
+   ```
+   :PlugInstall
+   ```
+
+   This config use the youcompleteme extension, this extension need to be compiled before use.
+   You can get some information from the official site of it:
+   [https://github.com/ycm-core/YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
+
+   Because the default VIM on the Mac OS don't support the python3 extension, so you need to
+   install the vim with brew.
+
    If you want to update the plugin, you can use the vim command
 
    ```

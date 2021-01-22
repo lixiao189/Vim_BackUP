@@ -4,6 +4,7 @@ let mapleader = "\<space>"
 
 " Manage your plugins here
 call plug#begin('~/.vim/plugged')
+Plug 'valloric/youcompleteme'
 Plug 'lifepillar/vim-solarized8'
 Plug 'scrooloose/syntastic'
 Plug 'chiel92/vim-autoformat'
@@ -55,6 +56,6 @@ set cul
 
 " Settings  for gvim
 if has("gui_running")
-  set lines=40 columns=120
+  set lines=50 columns=120
   set guifont=SF\ Mono\ Regular:h12
 endif
