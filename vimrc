@@ -30,9 +30,7 @@ au BufWrite * :Autoformat
 
 " set the coc.nvim
 let g:coc_global_extensions = [
-      \ 'coc-clangd',
       \ 'coc-vimlsp',
-      \ 'coc-ccls',
       \ 'coc-marketplace',
       \ 'coc-pyright']
 
