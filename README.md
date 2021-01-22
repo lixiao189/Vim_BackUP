@@ -8,7 +8,7 @@ If you are Mac OS user you need to install brew package manager first,
    ```
    node.js
    vim-plug
-   ccls
+   pylint
    ctags
    ```
 ## How to use

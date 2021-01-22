@@ -5,9 +5,9 @@ let mapleader = "\<space>"
 " Manage your plugins here
 call plug#begin('~/.vim/plugged')
 Plug 'lifepillar/vim-solarized8'
+Plug 'scrooloose/syntastic'
 Plug 'chiel92/vim-autoformat'
 Plug 'scrooloose/nerdtree'
-Plug 'neoclide/coc.nvim'
 Plug 'chun-yang/auto-pairs'
 Plug 'yggdroot/indentline'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
@@ -18,67 +18,43 @@ call plug#end()
 let g:mkdp_auto_start = 1
 let g:mkdp_auto_close = 1
 
+" set the syntax check
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" set the hot key of terminal
+nmap <leader>t :term<CR>
+
 " set the hot key of Tagbar
 nmap <leader>f :TagbarToggle<CR>
 
 " set the hot key of nerdtree
-nmap <leader>t :NERDTreeToggle<CR>
+nmap <leader>n :NERDTreeToggle<CR>
 
 " set the auto-format
 noremap <S-f> :Autoformat<CR>
 au BufWrite * :Autoformat
 
-" set the coc.nvim
-let g:coc_global_extensions = [
-      \ 'coc-vimlsp',
-      \ 'coc-marketplace',
-      \ 'coc-pyright']
+" set indent
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
+set autoindent
+set cindent
 
-  set hidden
-  set updatetime=100
-  " Set <tab> hot key
-  inoremap <silent><expr> <TAB>
-        \ pumvisible() ? "\<C-n>" :
-        \ <SID>check_back_space() ? "\<TAB>" :
-        \ coc#refresh()
-  inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-  function! s:check_back_space() abort
-    let col = col('.') - 1
-    return !col || getline('.')[col - 1]  =~# '\s'
-  endfunction
-  " go to syntax error
-  nmap <silent> [g <Plug>(coc-diagnostic-prev)
-  nmap <silent> ]g <Plug>(coc-diagnostic-next)
-  " go to code navigation
-  nmap <silent> gd <Plug>(coc-definition)
-  nmap <silent> gy <Plug>(coc-type-definition)
-  nmap <silent> gi <Plug>(coc-implementation)
-  nmap <silent> gr <Plug>(coc-references)
-  function! s:show_documennation()
-    if (index(['vim','help'], &filetype) >= 0)
-      execute 'h '.expand('<cword>')
-    elseif (coc#rpc#ready())
-      call CocActionAsync('doHover')
-    else
-      execute '!' . &keywordprg . " " . expand('<cword>')
-    endif
-  endfunction
+" set theme
+set background=dark
+colorscheme solarized8
+set cul
 
-  " set indent
-  set tabstop=2
-  set softtabstop=2
-  set shiftwidth=2
-  set expandtab
-  set autoindent
-  set cindent
-
-  " set theme
-  set background=dark
-  colorscheme solarized8
-  set cul
-
-  " Settings  for gvim
-  if has("gui_running")
-    set lines=40 columns=120
-    set guifont=SF\ Mono\ Regular:h12
-  endif
+" Settings  for gvim
+if has("gui_running")
+  set lines=40 columns=120
+  set guifont=SF\ Mono\ Regular:h12
+endif
