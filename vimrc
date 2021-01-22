@@ -1,5 +1,7 @@
 set relativenumber
 syntax on
+" 禁止折行
+set nowrap
 let mapleader = "\<space>"
 
 " Manage your plugins here
