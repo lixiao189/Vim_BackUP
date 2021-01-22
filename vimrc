@@ -11,16 +11,18 @@ Plug 'neoclide/coc.nvim'
 Plug 'chun-yang/auto-pairs'
 Plug 'yggdroot/indentline'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'majutsushi/tagbar'
 call plug#end()
 
 " set the markdown preview
 let g:mkdp_auto_start = 1
 let g:mkdp_auto_close = 1
 
+" set the hot key of Tagbar
+nmap <leader>f :TagbarToggle<CR>
+
 " set the hot key of nerdtree
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
+nmap <leader>t :NERDTreeToggle<CR>
 
 " set the auto-format
 noremap <S-f> :Autoformat<CR>

@@ -9,6 +9,7 @@ If you are Mac OS user you need to install brew package manager first,
    node.js
    vim-plug
    ccls
+   ctags
    ```
 ## How to use
    I use the vim-plug to manage all the plugins
