@@ -1,4 +1,4 @@
-set nu
+set relativenumber
 syntax on
 
 " Manage your plugins here
@@ -8,6 +8,7 @@ Plug 'ervandew/supertab'
 Plug 'scrooloose/syntastic'
 Plug 'chiel92/vim-autoformat'
 Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 " set the hot key of nerdtree
