@@ -48,11 +48,13 @@ set cindent
 set background=dark
 colorscheme solarized8
 set cul
-let g:airline_solarized_bg='dark'
 set noshowmode " Stop showing the editing mode
+let g:airline_theme='bubblegum'
 
 " Settings  for gvim
 if has("gui_running")
+  let g:airline_theme='solarized' 
+  let g:airline_solarized_bg='dark'
   set lines=50 columns=120
   set guifont=SF\ Mono\ Regular:h12
 endif
