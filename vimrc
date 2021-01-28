@@ -9,7 +9,7 @@ set backspace=2
 " Manage your plugins here
 call plug#begin('~/.vim/plugged')
 Plug 'valloric/youcompleteme'
-Plug 'lifepillar/vim-solarized8'
+Plug 'joshdick/onedark.vim'
 Plug 'chiel92/vim-autoformat'
 Plug 'scrooloose/nerdtree'
 Plug 'chun-yang/auto-pairs'
@@ -46,15 +46,13 @@ set cindent
 
 " set theme
 set background=dark
-colorscheme solarized8
+colorscheme onedark
 set cul
 set noshowmode " Stop showing the editing mode
 let g:airline_theme='bubblegum'
 
 " Settings  for gvim
 if has("gui_running")
-  let g:airline_theme='solarized' 
-  let g:airline_solarized_bg='dark'
   set lines=50 columns=120
   set guifont=SF\ Mono\ Regular:h12
 endif
