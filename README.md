@@ -22,7 +22,7 @@ If you are Mac OS user you need to install brew package manager first,
    :PlugInstall
    ```
 
-   This config use the youcompleteme extension, this extension need to be compiled before use.
+   This config use the youcompleteme extension, this extension **need to be compiled before use**.
    You can get some information from the official site of it:
    [https://github.com/ycm-core/YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
 
