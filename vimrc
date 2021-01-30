@@ -49,10 +49,6 @@ nmap <leader>f :TagbarToggle<CR>
 " set the hot key of nerdtree
 nmap <leader>n :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1 "Show the hidden file defaultly 
-" Open the nerdtree automaticly under the GUI mode
-if has("gui_running")
-  autocmd VimEnter * NERDTree 
-endif
 
 " set the auto-format
 noremap <S-f> :Autoformat<CR>
