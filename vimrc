@@ -53,6 +53,7 @@ let g:airline_theme='bubblegum'
 
 " Settings  for gvim
 if has("gui_running")
-  set lines=50 columns=120
+  set lines=50 columns=130
+  autocmd VimEnter * NERDTree " Open the file tree automaticly
   set guifont=SF\ Mono\ Regular:h12
 endif
