@@ -4,7 +4,7 @@ syntax on
 set nowrap
 let mapleader = "\<space>"
 "设置回车键
-set backspace=2 
+set backspace=2
 
 " Manage your plugins here
 call plug#begin('~/.vim/plugged')
@@ -16,9 +16,13 @@ Plug 'chun-yang/auto-pairs'
 Plug 'yggdroot/indentline'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'majutsushi/tagbar'
+Plug 'kien/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
+
+" set the fuzz searching
+nmap <leader>p :CtrlP<CR>
 
 " set the markdown preview
 let g:mkdp_auto_start = 1
