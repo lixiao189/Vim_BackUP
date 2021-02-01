@@ -1,10 +1,8 @@
 set relativenumber
 syntax on
-" 禁止折行
-set nowrap
+set nowrap " 禁止折行
 let mapleader = "\<space>"
-"设置回车键
-set backspace=2
+set backspace=2 " 设置回车键
 " set indent
 set tabstop=2
 set softtabstop=2
@@ -22,13 +20,14 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'valloric/youcompleteme'
 Plug 'joshdick/onedark.vim'
+Plug 'morhetz/gruvbox'
 Plug 'chiel92/vim-autoformat'
 Plug 'scrooloose/nerdtree'
 Plug 'tacahiroy/ctrlp-funky'
 Plug 'chun-yang/auto-pairs'
 Plug 'yggdroot/indentline'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'kien/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
@@ -57,7 +56,7 @@ noremap <S-f> :Autoformat<CR>
 
 " set theme
 set background=dark
-colorscheme onedark
+colorscheme gruvbox 
 set cul
 set noshowmode " Stop showing the editing mode
 let g:airline_theme='bubblegum'
