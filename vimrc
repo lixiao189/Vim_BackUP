@@ -29,6 +29,7 @@ Plug 'chun-yang/auto-pairs'
 Plug 'yggdroot/indentline'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'kien/ctrlp.vim'
+Plug 'majutsushi/tagbar'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
@@ -43,7 +44,10 @@ let g:formatters_cpp = ['custom_c']
 let g:formatters_c = ['custom_c']
 
 " set the hot key of terminal
-nmap <leader>t :term<CR>
+nmap <leader>te :term<CR>
+
+" set the hot key of the TagBar plugin
+nmap <leader>ta :TagbarToggle<CR>
 
 " set the hotkey of the ctrlp Plugin
 nmap <leader>p :CtrlP<CR>
@@ -61,6 +65,7 @@ let NERDTreeShowHidden=1 "Show the hidden file defaultly
 noremap <S-f> :Autoformat<CR>
 
 " set theme
+let g:go_highlight_trailing_whitespace_error=0 " Stop hightlight the trailing whitespace in go file
 set background=dark
 colorscheme gruvbox
 set cul
