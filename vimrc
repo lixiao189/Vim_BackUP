@@ -50,7 +50,7 @@ nmap <leader>te :term<CR>
 nmap <leader>ta :TagbarToggle<CR>
 
 " set the hotkey of the ctrlp Plugin
-nmap <leader>p :CtrlP<CR>
+nmap <leader>cp :CtrlP<CR>
 
 " set the function fuzzing searching function
 let g:ctrlp_funky_syntax_highlight = 1
@@ -58,7 +58,7 @@ let g:ctrlp_funky_matchtype = 'path'
 nnoremap <Leader>fu :CtrlPFunky<Cr>
 
 " set the hot key of nerdtree
-nmap <leader>n :NERDTreeToggle<CR>
+nmap <leader>ne :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1 "Show the hidden file defaultly
 
 " set the auto-format
