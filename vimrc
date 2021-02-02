@@ -12,7 +12,7 @@ set autoindent
 set cindent
 " Settings  for gvim
 if has("gui_running")
-  set lines=50 columns=135
+  set lines=50 columns=130
   set guifont=SF\ Mono\ Regular:h12
 endif
 
@@ -71,4 +71,3 @@ colorscheme gruvbox
 set cul
 set noshowmode " Stop showing the editing mode
 let g:airline_theme='bubblegum'
-
