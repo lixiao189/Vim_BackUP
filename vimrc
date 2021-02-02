@@ -19,6 +19,7 @@ endif
 " Manage your plugins here
 call plug#begin('~/.vim/plugged')
 Plug 'valloric/youcompleteme'
+Plug 'mhinz/vim-startify'
 Plug 'joshdick/onedark.vim'
 Plug 'morhetz/gruvbox'
 Plug 'chiel92/vim-autoformat'
@@ -54,14 +55,14 @@ nnoremap <Leader>fu :CtrlPFunky<Cr>
 
 " set the hot key of nerdtree
 nmap <leader>n :NERDTreeToggle<CR>
-let NERDTreeShowHidden=1 "Show the hidden file defaultly 
+let NERDTreeShowHidden=1 "Show the hidden file defaultly
 
 " set the auto-format
 noremap <S-f> :Autoformat<CR>
 
 " set theme
 set background=dark
-colorscheme gruvbox 
+colorscheme gruvbox
 set cul
 set noshowmode " Stop showing the editing mode
 let g:airline_theme='bubblegum'
