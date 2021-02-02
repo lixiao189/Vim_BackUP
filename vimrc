@@ -59,7 +59,7 @@ nnoremap <Leader>fu :CtrlPFunky<Cr>
 
 " set the hot key of nerdtree
 nmap <leader>ne :NERDTreeToggle<CR>
-let NERDTreeShowHidden=1 "Show the hidden file defaultly
+" let NERDTreeShowHidden=1 "Show the hidden file defaultly
 
 " set the auto-format
 noremap <S-f> :Autoformat<CR>
