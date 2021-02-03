@@ -43,7 +43,12 @@ If you are Mac OS user you need to install brew package manager first,
    ```
    :PlugUpgrade
    ```
+#### Auto Completion
+
+This configure use the coc.nvim to complete the programme. You can config by yourself.
+
 ### Theme
+
    This config has two themes, which are `one dark` and `the gruvbox`.
    If you want to change the theme you can just to search the 'colorscheme <your theme>' in
    vimrc file and change the name of the theme.
