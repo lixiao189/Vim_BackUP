@@ -32,7 +32,6 @@ Plug 'kien/ctrlp.vim'
 Plug 'majutsushi/tagbar'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'ervandew/supertab'
 call plug#end()
 
 " set the markdown preview
