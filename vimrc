@@ -6,6 +6,10 @@ let mapleader = "\<space>"
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+set backspace=2 " 设置删除键为增强模式
+autocmd FileType html set tabstop=2
+autocmd FileType html set softtabstop=2
+autocmd FileType html set shiftwidth=2
 set autoindent
 set cindent
 " Settings  for gvim
@@ -29,10 +33,25 @@ Plug 'chun-yang/auto-pairs'
 Plug 'yggdroot/indentline'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'kien/ctrlp.vim'
+Plug 'alvan/vim-closetag'
 Plug 'majutsushi/tagbar'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
+
+" set the vim-closetag plugins
+" filenames like *.xml, *.html, *.xhtml, ...
+" These are the file extensions where this plugin is enabled.
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
+" filenames like *.xml, *.xhtml, ...
+" This will make the list of non-closing tags self-closing in the specified files.
+let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
+" filetypes like xml, html, xhtml, ...
+" These are the file types where this plugin is enabled.
+let g:closetag_filetypes = 'html,xhtml,phtml'
+" filetypes like xml, xhtml, ...
+" This will make the list of non-closing tags self-closing in the specified files.
+let g:closetag_xhtml_filetypes = 'xhtml,jsx'
 
 " set the markdown preview
 let g:mkdp_auto_start = 1
