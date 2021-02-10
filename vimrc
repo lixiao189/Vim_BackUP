@@ -7,9 +7,6 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set backspace=2 " 设置删除键为增强模式
-autocmd FileType html set tabstop=2
-autocmd FileType html set softtabstop=2
-autocmd FileType html set shiftwidth=2
 set autoindent
 set cindent
 " Settings  for gvim
