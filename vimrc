@@ -12,7 +12,7 @@ set cindent
 " Settings  for gvim
 if has("gui_running")
 	set lines=40 columns=120
-	set guifont=SF\ Mono\ Regular:h13
+	set guifont=Ubuntu\ Mono\ derivative\ Powerline:h15
 endif
 
 " Manage your plugins here
@@ -86,10 +86,11 @@ noremap <S-f> :Autoformat<CR>
 
 " set theme
 let g:go_highlight_trailing_whitespace_error=0 " Stop hightlight the trailing whitespace in go file
-if has('gui_running')
-	set cul
-	set background=light
-	colorscheme gruvbox
-	let g:airline_theme='bubblegum'
-endif
+colorscheme gruvbox
+set background=dark
+set cul
+let g:airline_theme='bubblegum'
 set noshowmode " Stop showing the editing mode
+if has('gui_running')
+	set background=light
+endif
