@@ -12,7 +12,7 @@ set cindent
 " Settings  for gvim
 if has("gui_running")
 	set lines=40 columns=120
-	set guifont=SF\ Mono\ Regular:h14
+	set guifont=SF\ Mono\ Regular:h13
 endif
 
 " Manage your plugins here
@@ -90,6 +90,6 @@ if has('gui_running')
 	set cul
 	set background=light
 	colorscheme gruvbox
+	let g:airline_theme='bubblegum'
 endif
 set noshowmode " Stop showing the editing mode
-let g:airline_theme='bubblegum'
