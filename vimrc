@@ -86,11 +86,10 @@ noremap <S-f> :Autoformat<CR>
 
 " set theme
 let g:go_highlight_trailing_whitespace_error=0 " Stop hightlight the trailing whitespace in go file
-colorscheme gruvbox
-set background=dark
-set cul
-let g:airline_theme='bubblegum'
 set noshowmode " Stop showing the editing mode
+let g:airline_theme='monochrome'
 if has('gui_running')
+	colorscheme gruvbox
+	set cul
 	set background=light
 endif
