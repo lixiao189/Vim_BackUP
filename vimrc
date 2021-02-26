@@ -11,8 +11,9 @@ set autoindent
 set cindent
 " Settings  for gvim
 if has("gui_running")
+	set linespace=2
 	set lines=40 columns=120
-	set guifont=Ubuntu\ Mono\ derivative\ Powerline:h15
+	set guifont=SF\ Mono:h13
 endif
 
 " Manage your plugins here
@@ -90,6 +91,6 @@ set noshowmode " Stop showing the editing mode
 let g:airline_theme='monochrome'
 if has('gui_running')
 	colorscheme gruvbox
-	set cul
 	set background=dark
+	set cul
 endif
