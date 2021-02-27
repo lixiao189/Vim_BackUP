@@ -28,7 +28,6 @@ Plug 'chiel92/vim-autoformat'
 Plug 'scrooloose/nerdtree'
 Plug 'tacahiroy/ctrlp-funky'
 Plug 'chun-yang/auto-pairs'
-Plug 'yggdroot/indentline'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'kien/ctrlp.vim'
 Plug 'alvan/vim-closetag'
