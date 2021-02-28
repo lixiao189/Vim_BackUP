@@ -18,7 +18,6 @@ endif
 
 " Manage your plugins here
 call plug#begin('~/.vim/plugged')
-Plug 'w0rp/ale'
 Plug 'vim-scripts/AutoComplPop'
 Plug 'xuhdev/singlecompile'
 Plug 'mhinz/vim-startify'
