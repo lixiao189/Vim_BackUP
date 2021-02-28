@@ -83,12 +83,14 @@ nmap <leader>f :NERDTreeToggle<CR>
 " set the auto-format
 noremap <S-f> :Autoformat<CR>
 
-" set theme
+" set themes
 let g:go_highlight_trailing_whitespace_error=0 " Stop hightlight the trailing whitespace in go file
 set noshowmode " Stop showing the editing mode
-let g:airline_theme='monochrome'
 if has('gui_running')
+	set cul
+else
 	colorscheme gruvbox
-	set background=dark
+	set background=light
 	set cul
 endif
+let g:airline_theme='monochrome'
