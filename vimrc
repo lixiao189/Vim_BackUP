@@ -18,7 +18,8 @@ endif
 
 " Manage your plugins here
 call plug#begin('~/.vim/plugged')
-Plug 'vim-scripts/AutoComplPop'
+Plug 'skywind3000/vim-auto-popmenu'
+Plug 'skywind3000/vim-dict'
 Plug 'xuhdev/singlecompile'
 Plug 'mhinz/vim-startify'
 Plug 'joshdick/onedark.vim'
@@ -52,6 +53,12 @@ let g:closetag_xhtml_filetypes = 'xhtml,jsx'
 " set the markdown preview
 let g:mkdp_auto_start = 1
 let g:mkdp_auto_close = 1
+
+" The Settings of the auto completiona
+let g:apc_enable_ft = {"*": 1}
+set cpt=.,k,w,b
+set completeopt=menu,menuone,noselect
+set shortmess+=c " Dont' show the tips under the window
 
 " set the autoformatter
 let g:formatdef_custom_c = '"astyle --style=google"'
