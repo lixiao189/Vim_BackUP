@@ -21,7 +21,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'skywind3000/vim-auto-popmenu'
 Plug 'skywind3000/vim-dict'
 Plug 'xuhdev/singlecompile'
-Plug 'mhinz/vim-startify'
 Plug 'joshdick/onedark.vim'
 Plug 'morhetz/gruvbox'
 Plug 'chiel92/vim-autoformat'
@@ -91,6 +90,7 @@ nmap <leader>f :NERDTreeToggle<CR>
 noremap <S-f> :Autoformat<CR>
 
 " set themes
+set shortmess+=I " Don't show the introduction of the VIM
 let g:go_highlight_trailing_whitespace_error=0 " Stop hightlight the trailing whitespace in go file
 set noshowmode " Stop showing the editing mode
 if has('gui_running')
