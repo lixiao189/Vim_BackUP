@@ -9,10 +9,10 @@ set shiftwidth=4
 set backspace=2 " 设置删除键为增强模式
 set autoindent
 set cindent
-" Settings  for gvim
+" Settings for gvim
 if has("gui_running")
 	set linespace=2
-	set lines=40 columns=120
+	set lines=35 columns=100
 	set guifont=SF\ Mono:h13
 endif
 
@@ -21,14 +21,10 @@ call plug#begin('~/.vim/plugged')
 Plug 'skywind3000/vim-auto-popmenu'
 Plug 'skywind3000/vim-dict'
 Plug 'xuhdev/singlecompile'
-Plug 'joshdick/onedark.vim'
 Plug 'morhetz/gruvbox'
 Plug 'chiel92/vim-autoformat'
 Plug 'scrooloose/nerdtree'
-Plug 'tacahiroy/ctrlp-funky'
 Plug 'chun-yang/auto-pairs'
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-Plug 'kien/ctrlp.vim'
 Plug 'alvan/vim-closetag'
 Plug 'majutsushi/tagbar'
 Plug 'vim-airline/vim-airline'
@@ -48,10 +44,6 @@ let g:closetag_filetypes = 'html,xhtml,phtml'
 " filetypes like xml, xhtml, ...
 " This will make the list of non-closing tags self-closing in the specified files.
 let g:closetag_xhtml_filetypes = 'xhtml,jsx'
-
-" set the markdown preview
-let g:mkdp_auto_start = 1
-let g:mkdp_auto_close = 1
 
 " The Settings of the auto completiona
 let g:apc_enable_ft = {"*": 1}
@@ -73,14 +65,6 @@ nmap <leader>s :term<CR>
 
 " set the hot key of the TagBar plugin
 nmap <leader>t :TagbarToggle<CR>
-
-" set the hotkey of the ctrlp Plugin
-nmap <leader>p :CtrlP<CR>
-
-" set the function fuzzing searching function
-let g:ctrlp_funky_syntax_highlight = 1
-let g:ctrlp_funky_matchtype = 'path'
-nnoremap <Leader>ff :CtrlPFunky<Cr>
 
 " set the hot key of nerdtree
 nmap <leader>f :NERDTreeToggle<CR>
