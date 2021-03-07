@@ -79,6 +79,8 @@ let g:go_highlight_trailing_whitespace_error=0 " Stop hightlight the trailing wh
 set noshowmode " Stop showing the editing mode
 if has('gui_running')
 	set cul
+	colorscheme gruvbox
+	set background=light
 else
 	colorscheme gruvbox
 	set background=dark
