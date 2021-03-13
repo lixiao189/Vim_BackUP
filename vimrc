@@ -55,6 +55,8 @@ set shortmess+=c " Dont' show the tips under the window
 let g:formatdef_custom_c = '"astyle --style=google"'
 let g:formatters_cpp = ['custom_c']
 let g:formatters_c = ['custom_c']
+let g:formatdef_custom_asm = '"/Users/node/Go/bin/asmfmt"' " set the path to asm formatter
+let g:formatters_asm = ['custom_asm']
 
 " set the hot key to run the programe
 nmap <leader>c :SCCompile<cr>
