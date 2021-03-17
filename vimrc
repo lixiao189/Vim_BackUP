@@ -85,7 +85,7 @@ if has('gui_running')
 	set background=light
 else
 	colorscheme gruvbox
-	set background=dark
+	set background=light
 	set cul
 endif
 let g:airline_theme='monochrome'
