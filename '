@@ -85,7 +85,7 @@ if has('gui_running')
 	set background=light
 else
 	colorscheme default
-	" set background=dark
-	" set cul
+	set background=dark
+	set cul
 endif
 let g:airline_theme='monochrome'
