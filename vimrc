@@ -6,6 +6,12 @@ let mapleader = "\<space>" " Use the <space> as the leader key
 set tabstop=4 
 set softtabstop=4 
 set shiftwidth=4 
+if &filetype == 'c' || &filetype == 'cpp'
+	set tabstop=2
+	set softtabstop=2
+	set shiftwidth=2
+endif
+
 set backspace=2 "设置删除键为增强模式 
 set autoindent 
 set cindent
@@ -46,7 +52,8 @@ let g:lightline = {
 set shortmess+=c
 let g:coc_global_extensions = ['coc-java',
 			\'coc-json',
-			\'coc-vimlsp']
+			\'coc-vimlsp',
+			\'coc-clangd']
 " Some servers have issues with backup files, see #649.
 set nobackup
 set nowritebackup
