@@ -26,35 +26,20 @@ call plug#begin('~/.vim/plugged')
 " The lsp server for vim
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" Change the item of the completion with <TAB>
+Plug 'ervandew/supertab'
+
 Plug 'morhetz/gruvbox'
 Plug 'chiel92/vim-autoformat'
 Plug 'scrooloose/nerdtree'
 Plug 'chun-yang/auto-pairs'
-Plug 'alvan/vim-closetag'
 Plug 'majutsushi/tagbar'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
-" set the vim-closetag plugins
-" filenames like *.xml, *.html, *.xhtml, ...
-" These are the file extensions where this plugin is enabled.
-let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
-" filenames like *.xml, *.xhtml, ...
-" This will make the list of non-closing tags self-closing in the specified files.
-let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
-" filetypes like xml, html, xhtml, ...
-" These are the file types where this plugin is enabled.
-let g:closetag_filetypes = 'html,xhtml,phtml'
-" filetypes like xml, xhtml, ...
-" This will make the list of non-closing tags self-closing in the specified files.
-let g:closetag_xhtml_filetypes = 'xhtml,jsx'
-
-" The Settings of the auto completiona
-let g:apc_enable_ft = {"*": 1}
-set cpt=.,k,w,b
-set completeopt=menu,menuone,noselect
-set shortmess+=c " Dont' show the tips under the window
+" The settings of the supertab plugins
+let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " set the autoformatter
 let g:formatdef_custom_c = '"astyle --style=google"'
