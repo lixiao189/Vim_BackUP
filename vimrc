@@ -18,9 +18,14 @@ endif
 
 " Manage your plugins here
 call plug#begin('~/.vim/plugged')
-Plug 'skywind3000/vim-auto-popmenu'
-Plug 'skywind3000/vim-dict'
-Plug 'xuhdev/singlecompile'
+
+" These are lightweight plugins to complete the words 
+" Plug 'skywind3000/vim-auto-popmenu'
+" Plug 'skywind3000/vim-dict'
+
+" The lsp server for vim
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 Plug 'morhetz/gruvbox'
 Plug 'chiel92/vim-autoformat'
 Plug 'scrooloose/nerdtree'
