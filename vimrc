@@ -39,7 +39,6 @@ Plug 'chun-yang/auto-pairs'
 Plug 'itchyny/lightline.vim'
 call plug#end()
 
-
 " The settings of the lightline
 set laststatus=2
 let g:lightline = {
