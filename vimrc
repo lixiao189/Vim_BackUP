@@ -49,7 +49,8 @@ set shortmess+=c
 let g:coc_global_extensions = ['coc-java',
 			\'coc-json',
 			\'coc-vimlsp',
-			\'coc-clangd']
+			\'coc-clangd',
+			\'coc-go']
 " Some servers have issues with backup files, see #649.
 set nobackup
 set nowritebackup
