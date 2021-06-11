@@ -1,27 +1,26 @@
-set relativenumber
+set relativenumber 
 syntax on
-set nowrap " 禁止折行
+set nowrap " 禁止折行 
 let mapleader = "\<space>" " Use the <space> as the leader key
 " set indent
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set backspace=2 " 设置删除键为增强模式
-set autoindent
+set tabstop=4 
+set softtabstop=4 
+set shiftwidth=4 
+set backspace=2 "设置删除键为增强模式 
+set autoindent 
 set cindent
 " Settings for gvim
-if has("gui_running")
-	set linespace=2
-	set lines=35 columns=100
-	set guifont=SF\ Mono:h13
+if has("gui_running") 
+	set linespace=2 
+	set lines=35 columns=100 
+	set guifont=SF\ Mono:h13 
 endif
 
 " Manage your plugins here
 call plug#begin('~/.vim/plugged')
 
-" These are lightweight plugins to complete the words on the servers
-" Plug 'skywind3000/vim-auto-popmenu'
-" Plug 'skywind3000/vim-dict'
+" These are lightweight plugins to complete the words on the servers Plug
+" 'skywind3000/vim-auto-popmenu' Plug 'skywind3000/vim-dict'
 
 " The lsp server for vim
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -29,12 +28,18 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Change the item of the completion with <TAB>
 Plug 'ervandew/supertab'
 
-Plug 'morhetz/gruvbox'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree' 
 Plug 'chun-yang/auto-pairs'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
 call plug#end()
+
+
+" The settings of the lightline
+set laststatus=2
+let g:lightline = {
+  \ 'colorscheme': 'one',
+  \ 'background': 'light',
+  \ }	
 
 
 " The settings of the coc.nvim complete plugins
@@ -99,11 +104,9 @@ let g:go_highlight_trailing_whitespace_error=0 " Stop hightlight the trailing wh
 set noshowmode " Stop showing the editing mode
 if has('gui_running')
 	set cul
-	colorscheme gruvbox
-	set background=light
 else
 	colorscheme default
-	" set background=dark
+	" colorscheme onedark
+	" set background=light
 	" set cul
 endif
-let g:airline_theme='monochrome'
