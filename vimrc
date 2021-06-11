@@ -32,7 +32,6 @@ Plug 'ervandew/supertab'
 Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdtree'
 Plug 'chun-yang/auto-pairs'
-Plug 'majutsushi/tagbar'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
@@ -46,8 +45,8 @@ let g:coc_global_extensions = ['coc-java',
 " Some servers have issues with backup files, see #649.
 set nobackup
 set nowritebackup
-" Use H to show documentation in preview window.
-nnoremap <silent> H :call <SID>show_documentation()<CR>
+" Use <space> + h to show documentation in preview window.
+nnoremap <leader> h :call <SID>show_documentation()<CR>
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
@@ -67,7 +66,11 @@ nmap <leader>rn <Plug>(coc-rename)
 command! -nargs=0 Format :call CocAction('format')
 " Set the hot key to autoformat the file
 nmap <s-f> :Format<cr>
-
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gt <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 " The settings of the supertab plugins
 let g:SuperTabDefaultCompletionType = "<c-n>"
