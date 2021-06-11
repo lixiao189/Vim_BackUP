@@ -17,9 +17,6 @@ set autoindent
 set cindent
 " Settings for gvim
 if has("gui_running") 
-	set linespace=2 
-	set lines=35 columns=100 
-	set guifont=SF\ Mono:h13 
 endif
 
 " Manage your plugins here
@@ -37,14 +34,14 @@ Plug 'ervandew/supertab'
 Plug 'scrooloose/nerdtree' 
 Plug 'chun-yang/auto-pairs'
 Plug 'itchyny/lightline.vim'
+
+" The themes of the VIM
+Plug 'altercation/solarized' 
+
 call plug#end()
 
 " The settings of the lightline
 set laststatus=2
-let g:lightline = {
-  \ 'colorscheme': 'one',
-  \ 'background': 'light',
-  \ }	
 
 
 " The settings of the coc.nvim complete plugins
@@ -109,10 +106,19 @@ set shortmess+=I " Don't show the introduction of the VIM
 let g:go_highlight_trailing_whitespace_error=0 " Stop hightlight the trailing whitespace in go file
 set noshowmode " Stop showing the editing mode
 if has('gui_running')
+	set linespace=2 
+	set lines=35 columns=100 
+	set guifont=SF\ Mono:h13 
+	colorscheme solarized 
+	set background=light
 	set cul
+	let g:lightline = {
+		\ 'colorscheme': 'solarized',
+		\ }	
 else
+	let g:lightline = {
+				\ 'colorscheme': 'wombat',
+				\}
 	colorscheme default
-	" colorscheme onedark
-	" set background=light
-	" set cul
+	set background=light
 endif
