@@ -80,15 +80,14 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gt <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+" The hot key for coc.nvim action
+nnoremap <leader>a :CocAction<cr>
+" The hot key for coc.nvim diagnostics
+nnoremap <leader>d :CocDiagnostics<cr>
+
 
 " The settings of the supertab plugins
 let g:SuperTabDefaultCompletionType = "<c-n>"
-
-
-" set the hot key to run the programe
-nmap <leader>c :SCCompile<cr>
-nmap <leader>r :SCCompileRun<cr>
-
 
 " set the hot key to open the shell
 nmap <leader>s :term<CR>
@@ -106,6 +105,10 @@ nmap <leader>f :NERDTreeToggle<CR>
 set shortmess+=I " Don't show the introduction of the VIM
 let g:go_highlight_trailing_whitespace_error=0 " Stop hightlight the trailing whitespace in go file
 set noshowmode " Stop showing the editing mode
+
+function! CocCurrentFunction()
+	return get(b:, 'coc_current_function', '')
+endfunction
 if has('gui_running')
 	set linespace=2 
 	set lines=35 columns=100 
@@ -113,13 +116,30 @@ if has('gui_running')
 	colorscheme solarized 
 	set background=light
 	set cul
+
 	let g:lightline = {
-		\ 'colorscheme': 'solarized',
-		\ }	
+      \ 'colorscheme': 'solarized',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'cocstatus', 'currentfunction', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'cocstatus': 'coc#status',
+      \   'currentfunction': 'CocCurrentFunction'
+      \ },
+      \ }
 else
 	let g:lightline = {
-				\ 'colorscheme': 'wombat',
-				\}
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'cocstatus', 'currentfunction', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'cocstatus': 'coc#status',
+      \   'currentfunction': 'CocCurrentFunction'
+      \ },
+      \ }
 	colorscheme default
 	set background=light
 endif
