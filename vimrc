@@ -50,7 +50,8 @@ let g:coc_global_extensions = ['coc-java',
 			\'coc-json',
 			\'coc-vimlsp',
 			\'coc-clangd',
-			\'coc-go']
+			\'coc-go',
+			\'coc-xml']
 " Some servers have issues with backup files, see #649.
 set nobackup
 set nowritebackup
