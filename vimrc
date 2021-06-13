@@ -117,6 +117,7 @@ if has('gui_running')
 	colorscheme solarized 
 	set background=light
 	set cul
+	set cuc
 
 	let g:lightline = {
       \ 'colorscheme': 'solarized',
