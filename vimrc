@@ -39,8 +39,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 " The themes of the VIM
-Plug 'altercation/solarized' 
-
+Plug 'lifepillar/vim-solarized8'
 call plug#end()
 
 " The settings of the lightline
@@ -116,11 +115,11 @@ endfunction
 if has('gui_running')
 	set linespace=2 
 	set lines=35 columns=100 
-	set guifont=SF\ Mono:h13 
-	colorscheme solarized 
-	set background=light
+	set guifont=SF\ Mono:h13
+	colorscheme solarized8
+	set background=dark
 	set cul
-	set cuc
+	" set cuc
 
 	let g:lightline = {
       \ 'colorscheme': 'solarized',
