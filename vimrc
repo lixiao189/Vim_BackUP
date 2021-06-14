@@ -35,6 +35,9 @@ Plug 'scrooloose/nerdtree'
 Plug 'chun-yang/auto-pairs'
 Plug 'itchyny/lightline.vim'
 
+" The plugin to preview markdown file
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+
 " The themes of the VIM
 Plug 'altercation/solarized' 
 
