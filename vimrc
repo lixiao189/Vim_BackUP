@@ -53,7 +53,9 @@ let g:coc_global_extensions = ['coc-java',
 			\'coc-vimlsp',
 			\'coc-clangd',
 			\'coc-go',
-			\'coc-xml']
+			\'coc-xml',
+			\'coc-pyright',
+			\'coc-phpls']
 " Some servers have issues with backup files, see #649.
 set nobackup
 set nowritebackup
@@ -117,7 +119,7 @@ if has('gui_running')
 	set lines=35 columns=100 
 	set guifont=SF\ Mono:h13
 	colorscheme solarized8
-	set background=dark
+	set background=light
 	set cul
 	" set cuc
 
