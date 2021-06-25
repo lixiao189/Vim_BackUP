@@ -31,9 +31,17 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Change the item of the completion with <TAB>
 Plug 'ervandew/supertab'
 
+" The file manager
 Plug 'scrooloose/nerdtree' 
+
+" Insert the pairs automatically
 Plug 'chun-yang/auto-pairs'
+
+" A lightweight status line 
 Plug 'itchyny/lightline.vim'
+
+" Display the indentline
+Plug 'yggdroot/indentline'
 
 " The plugin to preview markdown file
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
