@@ -101,8 +101,12 @@ nnoremap <leader>a :CocAction<cr>
 " The hot key for coc.nvim diagnostics
 nnoremap <leader>d :CocDiagnostics<cr>
 
-" The settings of the fzf.vim plugin
-nnoremap <c-f> :Ag<cr>
+" The settings of the fzf.vim plugi
+nnoremap <c-f> :Ag<CR>
+" Show all the commmands in the VIM
+nnoremap <leader>c :Commands<CR> 
+" Show the normal mode mappings
+nnoremap <silent>hm :Maps<CR>
 
 " The settings of the supertab plugins
 let g:SuperTabDefaultCompletionType = "<c-n>"
