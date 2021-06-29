@@ -25,6 +25,10 @@ call plug#begin('~/.vim/plugged')
 " These are lightweight plugins to complete the words on the servers Plug
 " 'skywind3000/vim-auto-popmenu' Plug 'skywind3000/vim-dict'
 
+" The wrapper of the fzf plugin
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+
 " The lsp server for vim
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
