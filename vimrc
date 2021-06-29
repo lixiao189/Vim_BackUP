@@ -57,7 +57,6 @@ call plug#end()
 " The settings of the lightline
 set laststatus=2
 
-
 " The settings of the coc.nvim complete plugins
 set shortmess+=c
 let g:coc_global_extensions = ['coc-java',
@@ -102,6 +101,8 @@ nnoremap <leader>a :CocAction<cr>
 " The hot key for coc.nvim diagnostics
 nnoremap <leader>d :CocDiagnostics<cr>
 
+" The settings of the fzf.vim plugin
+nnoremap <c-f> :Ag<cr>
 
 " The settings of the supertab plugins
 let g:SuperTabDefaultCompletionType = "<c-n>"
