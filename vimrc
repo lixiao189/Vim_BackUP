@@ -111,10 +111,6 @@ nnoremap <silent>hm :Maps<CR>
 " The settings of the supertab plugins
 let g:SuperTabDefaultCompletionType = "<c-n>"
 
-" set the hot key to open the shell
-nmap <leader>s :term<CR>
-
-
 " set the hot key of the TagBar plugin
 nmap <leader>t :TagbarToggle<CR>
 
