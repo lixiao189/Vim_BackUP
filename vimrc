@@ -59,11 +59,7 @@ let g:coc_global_extensions = ['coc-java',
 			\'coc-xml',
 			\'coc-pyright',
 			\'coc-phpls',
-			\'coc-markdownlint',
-			\'coc-html',
-			\'coc-css',
-			\'coc-tsserver',
-			\'coc-vetur']
+			\'coc-markdownlint']
 " Some servers have issues with backup files, see #649.
 set nobackup
 set nowritebackup
