@@ -59,6 +59,7 @@ set laststatus=2
 
 " The settings of the coc.nvim complete plugins
 set shortmess+=c
+" The list of the lsp plugins
 let g:coc_global_extensions = ['coc-java',
 			\'coc-json',
 			\'coc-vimlsp',
@@ -66,7 +67,12 @@ let g:coc_global_extensions = ['coc-java',
 			\'coc-go',
 			\'coc-xml',
 			\'coc-pyright',
-			\'coc-phpls']
+			\'coc-phpls',
+			\'coc-markdownlint',
+			\'coc-html',
+			\'coc-css',
+			\'coc-tsserver',
+			\'coc-vetur']
 " Some servers have issues with backup files, see #649.
 set nobackup
 set nowritebackup
