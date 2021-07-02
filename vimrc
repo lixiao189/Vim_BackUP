@@ -71,7 +71,7 @@ let g:coc_global_extensions = ['coc-java',
 set nobackup
 set nowritebackup
 " Use <space> + h to show documentation in preview window.
-nnoremap <leader> h :call <SID>show_documentation()<CR>
+nnoremap <leader>h :call <SID>show_documentation()<CR>
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
@@ -151,9 +151,6 @@ let g:closetag_regions = {
     \ }
 " Shortcut for closing tags, default is '>'
 let g:closetag_shortcut = '>'
-" Add > at current position without closing the current tag, default is ''
-let g:closetag_close_shortcut = '<leader>>'
-
 
 " set the hot key of nerdtree
 nmap <leader>f :NERDTreeToggle<CR>
