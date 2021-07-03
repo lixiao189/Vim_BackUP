@@ -19,6 +19,9 @@ call plug#begin('~/.vim/plugged')
 " These are lightweight plugins to complete the words on the servers Plug
 " 'skywind3000/vim-auto-popmenu' Plug 'skywind3000/vim-dict'
 
+" Plugin for adding comment
+Plug 'preservim/nerdcommenter'
+
 " The wrapper of the fzf plugin
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
@@ -152,9 +155,30 @@ let g:closetag_regions = {
 " Shortcut for closing tags, default is '>'
 let g:closetag_shortcut = '>'
 
+
+" Some settings of the nerdcommenter plugin
+" Create default mappings
+let g:NERDCreateDefaultMappings = 1
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+" Enable NERDCommenterToggle to check all selected lines is commented or not 
+let g:NERDToggleCheckAllLines = 1
+
+
 " set the hot key of nerdtree
 nmap <leader>f :NERDTreeToggle<CR>
 " let NERDTreeShowHidden=1 "Show the hidden file defaultly
+
 
 " set themes
 set shortmess+=I " Don't show the introduction of the VIM
