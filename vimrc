@@ -122,7 +122,7 @@ nnoremap <c-f> :Ag<CR>
 " Show all the commmands in the VIM
 nnoremap <leader>c :Commands<CR> 
 " Show the normal mode mappings
-nnoremap <silent>hm :Maps<CR>
+nnoremap <leader>m :Maps<CR>
 
 " The settings of the supertab plugins
 let g:SuperTabDefaultCompletionType = "<c-n>"
@@ -193,7 +193,7 @@ if has('gui_running')
 	set lines=35 columns=100 
 	set guifont=SF\ Mono:h13
 	colorscheme solarized8
-	set background=light
+	set background=dark
 	set cul
 	" set cuc
 
