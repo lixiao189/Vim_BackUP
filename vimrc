@@ -193,7 +193,7 @@ if has('gui_running')
 	set lines=35 columns=100 
 	set guifont=SF\ Mono:h13
 	colorscheme solarized8
-	set background=dark
+	set background=light
 	set cul
 	" set cuc
 
