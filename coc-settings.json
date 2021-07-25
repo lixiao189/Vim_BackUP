@@ -2,5 +2,6 @@
 	"vetur.format.options.tabSize": 4,
 	"clangd.arguments": [
 		"--fallback-style=Microsoft"
-	]
+	],
+	"yaml.format.enable": true
 }
