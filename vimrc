@@ -9,6 +9,7 @@ set shiftwidth=4
 set backspace=2 "设置删除键为增强模式 
 set autoindent 
 set cindent
+set mouse=a " Enable the support for the mouse event
 " Settings for gvim
 if has("gui_running") 
 endif
@@ -47,12 +48,62 @@ Plug 'yggdroot/indentline'
 " The plugin to preview markdown file
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
+" The plugin to show the buffers 
+Plug 'mengelbrecht/lightline-bufferline'
+
 " The themes of the VIM
 Plug 'lifepillar/vim-solarized8'
 call plug#end()
 
 " The settings of the lightline
 set laststatus=2
+set showtabline=2
+set guioptions-=e
+let g:lightline#bufferline#show_number  = 2
+let g:lightline#bufferline#unnamed      = '[No Name]'
+autocmd BufWritePost,TextChanged,TextChangedI * call lightline#update()
+let g:lightline = {
+  \ 'colorscheme': 'solarized',
+  \ 'active': {
+  \   'left': [ [ 'mode', 'paste' ],
+  \             [ 'cocstatus', 'currentfunction', 'readonly', 'filename', 'modified' ] ]
+  \ },
+  \ 'component_function': {
+  \   'cocstatus': 'coc#status',
+  \   'currentfunction': 'CocCurrentFunction'
+  \ },
+  \ 'tabline': {
+      \   'left': [ ['buffers'] ],
+	  \   'right': [ ['close'] ]
+      \ },
+      \ 'component_expand': {
+      \   'buffers': 'lightline#bufferline#buffers'
+      \ },
+      \ 'component_type': {
+      \   'buffers': 'tabsel'
+      \ }
+  \ }
+nmap <Leader>1 <Plug>lightline#bufferline#go(1)
+nmap <Leader>2 <Plug>lightline#bufferline#go(2)
+nmap <Leader>3 <Plug>lightline#bufferline#go(3)
+nmap <Leader>4 <Plug>lightline#bufferline#go(4)
+nmap <Leader>5 <Plug>lightline#bufferline#go(5)
+nmap <Leader>6 <Plug>lightline#bufferline#go(6)
+nmap <Leader>7 <Plug>lightline#bufferline#go(7)
+nmap <Leader>8 <Plug>lightline#bufferline#go(8)
+nmap <Leader>9 <Plug>lightline#bufferline#go(9)
+nmap <Leader>0 <Plug>lightline#bufferline#go(10)
+nmap <Leader>d1 <Plug>lightline#bufferline#delete(1)
+nmap <Leader>d2 <Plug>lightline#bufferline#delete(2)
+nmap <Leader>d3 <Plug>lightline#bufferline#delete(3)
+nmap <Leader>d4 <Plug>lightline#bufferline#delete(4)
+nmap <Leader>d5 <Plug>lightline#bufferline#delete(5)
+nmap <Leader>d6 <Plug>lightline#bufferline#delete(6)
+nmap <Leader>d7 <Plug>lightline#bufferline#delete(7)
+nmap <Leader>d8 <Plug>lightline#bufferline#delete(8)
+nmap <Leader>d9 <Plug>lightline#bufferline#delete(9)
+nmap <Leader>d0 <Plug>lightline#bufferline#delete(10)
+
 
 " The settings of the coc.nvim complete plugins
 set shortmess+=c
@@ -197,30 +248,7 @@ if has('gui_running')
 	set background=light
 	set cul
 	" set cuc
-
-	let g:lightline = {
-      \ 'colorscheme': 'solarized',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'cocstatus', 'currentfunction', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'cocstatus': 'coc#status',
-      \   'currentfunction': 'CocCurrentFunction'
-      \ },
-      \ }
 else
-	let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'cocstatus', 'currentfunction', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'cocstatus': 'coc#status',
-      \   'currentfunction': 'CocCurrentFunction'
-      \ },
-      \ }
 	colorscheme default
 	set background=light
 endif
