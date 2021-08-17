@@ -179,7 +179,7 @@ nmap <leader>f :NERDTreeToggle<CR>
 " set themes
 set laststatus=2 
 set shortmess+=I " Don't show the introduction of the VIM
-set statusline=%F%m%r%h%w\ [%Y]\ %=\ [%l,\ %v]\  
+set statusline=%F%m%r%h%w\ %=\ [%l,\ %v]\  
 let g:go_highlight_trailing_whitespace_error=0 " Stop hightlight the trailing whitespace in go file
 
 function! CocCurrentFunction()
