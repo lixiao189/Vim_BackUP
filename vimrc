@@ -112,6 +112,8 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
+" Compile the current project with run.sh script 
+nnoremap <leader>r :!sh run.sh<CR>
 
 " The settings of the fzf.vim plugi
 nnoremap <c-f> :Ag<CR>
