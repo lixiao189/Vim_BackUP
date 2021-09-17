@@ -188,11 +188,8 @@ nmap <leader>f :NERDTreeToggle<CR>
 set laststatus=2 
 set shortmess+=I " Don't show the introduction of the VIM
 set statusline=%F%m%r%h%w\ %=\ [%l,\ %v]\  
+set background=dark
 let g:go_highlight_trailing_whitespace_error=0 " Stop hightlight the trailing whitespace in go file
-
-function! CocCurrentFunction()
-	return get(b:, 'coc_current_function', '')
-endfunction
 if has('gui_running')
 	set linespace=2 
 	set lines=35 columns=100 
@@ -203,5 +200,4 @@ if has('gui_running')
 	" set cuc
 else
 	colorscheme default
-	set background=light
 endif
