@@ -9,10 +9,16 @@ set shiftwidth=4
 set backspace=2 "设置删除键为增强模式 
 set autoindent 
 set cindent
+set expandtab
 set mouse=a " Enable the support for the mouse event
 " Settings for gvim
 if has("gui_running") 
 endif
+
+" The settings of the indent-guides plugin
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
 
 " Manage your plugins here
 call plug#begin('~/.vim/plugged')
@@ -39,8 +45,8 @@ Plug 'scrooloose/nerdtree'
 " Insert the pairs automatically
 Plug 'chun-yang/auto-pairs'
 
-" Display the indentline
-Plug 'yggdroot/indentline'
+" The indent plugin
+Plug 'nathanaelkane/vim-indent-guides'
 
 " The plugin to preview markdown file
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
