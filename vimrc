@@ -56,6 +56,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 " The themes of the VIM
 Plug 'lifepillar/vim-solarized8'
+Plug 'morhetz/gruvbox'
 call plug#end()
 
 " The settings of the coc.nvim complete plugins
@@ -202,5 +203,5 @@ if has('gui_running')
 	set cul
 	" set cuc
 else
-	colorscheme default
+	colorscheme gruvbox
 endif
