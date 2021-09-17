@@ -189,6 +189,7 @@ nmap <leader>f :NERDTreeToggle<CR>
 
 
 " set themes
+set cul
 set laststatus=2 
 set shortmess+=I " Don't show the introduction of the VIM
 set statusline=%F%m%r%h%w\ %=\ [%l,\ %v]\  
