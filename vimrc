@@ -15,6 +15,9 @@ set mouse=a " Enable the support for the mouse event
 if has("gui_running") 
 endif
 
+" Speed up the Vim Plug
+let g:plug_url_format='https://git::@hub.fastgit.org/%s.git'
+
 " The settings of the indent-guides plugin
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 2
