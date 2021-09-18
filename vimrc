@@ -1,27 +1,5 @@
-set relativenumber 
-syntax on
-set nowrap " 禁止折行 
-let mapleader = "\<space>" " Use the <space> as the leader key
-" set indent
-set tabstop=4 
-set softtabstop=4 
-set shiftwidth=4 
-set backspace=2 "设置删除键为增强模式 
-set autoindent 
-set cindent
-set expandtab
-set mouse=a " Enable the support for the mouse event
-" Settings for gvim
-if has("gui_running") 
-endif
-
 " Speed up the Vim Plug
 let g:plug_url_format='https://git::@hub.fastgit.org/%s.git'
-
-" The settings of the indent-guides plugin
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_start_level = 2
-let g:indent_guides_guide_size = 1
 
 " Manage your plugins here
 call plug#begin('~/.vim/plugged')
@@ -49,7 +27,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'chun-yang/auto-pairs'
 
 " The indent plugin
-Plug 'nathanaelkane/vim-indent-guides'
+Plug 'yggdroot/indentline'
 
 " The plugin to preview markdown file
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
@@ -58,6 +36,30 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'lifepillar/vim-solarized8'
 Plug 'morhetz/gruvbox'
 call plug#end()
+
+
+set relativenumber 
+syntax on
+" The settings of the VIM
+set nowrap " 禁止折行 
+let mapleader = "\<space>" " Use the <space> as the leader key
+set tabstop=4 
+set softtabstop=4 
+set shiftwidth=4 
+set backspace=2 "设置删除键为增强模式 
+set autoindent 
+set cindent
+set expandtab
+set mouse=a " Enable the support for the mouse event
+set cul
+set laststatus=2 
+set shortmess+=I " Don't show the introduction of the VIM
+set statusline=%F%m%r%h%w\ %=\ [%l,\ %v]\  
+set background=dark
+set list lcs=tab:\|\ 
+let g:go_highlight_trailing_whitespace_error=0 " Stop hightlight the trailing whitespace in go file
+colorscheme gruvbox
+
 
 " The settings of the coc.nvim complete plugins
 set shortmess+=c
@@ -122,8 +124,10 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
+
 " Compile the current project with run.sh script 
 nnoremap <leader>r :!sh run.sh<CR>
+
 
 " The settings of the fzf.vim plugi
 nnoremap <c-f> :Ag<CR>
@@ -131,6 +135,7 @@ nnoremap <c-f> :Ag<CR>
 nnoremap <leader>c :Commands<CR> 
 " Show the normal mode mappings
 nnoremap <leader>m :Maps<CR>
+
 
 " The settings of the supertab plugins
 let g:SuperTabDefaultCompletionType = "<c-n>"
@@ -187,22 +192,3 @@ let g:NERDToggleCheckAllLines = 1
 nmap <leader>f :NERDTreeToggle<CR>
 " let NERDTreeShowHidden=1 "Show the hidden file defaultly
 
-
-" set themes
-set cul
-set laststatus=2 
-set shortmess+=I " Don't show the introduction of the VIM
-set statusline=%F%m%r%h%w\ %=\ [%l,\ %v]\  
-set background=dark
-let g:go_highlight_trailing_whitespace_error=0 " Stop hightlight the trailing whitespace in go file
-if has('gui_running')
-	set linespace=2 
-	set lines=35 columns=100 
-	set guifont=SF\ Mono:h13
-	colorscheme solarized8
-	set background=light
-	set cul
-	" set cuc
-else
-	colorscheme gruvbox
-endif
