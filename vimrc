@@ -49,7 +49,6 @@ set shiftwidth=4
 set backspace=2 "设置删除键为增强模式 
 set autoindent 
 set cindent
-set expandtab
 set mouse=a " Enable the support for the mouse event
 set cul
 set laststatus=2 
@@ -59,7 +58,9 @@ set background=dark
 set list lcs=tab:\|\ 
 let g:go_highlight_trailing_whitespace_error=0 " Stop hightlight the trailing whitespace in go file
 colorscheme gruvbox
-
+set expandtab
+" Some type of file need use tab to indent
+autocmd FileType go set noexpandtab 
 
 " The settings of the coc.nvim complete plugins
 set shortmess+=c
