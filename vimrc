@@ -7,6 +7,9 @@ call plug#begin('~/.vim/plugged')
 " These are lightweight plugins to complete the words on the servers Plug
 " 'skywind3000/vim-auto-popmenu' Plug 'skywind3000/vim-dict'
 
+" Plugin for syntax hightlight and indent 
+Plug 'sheerun/vim-polyglot'
+
 " Plugin for adding comment
 Plug 'preservim/nerdcommenter'
 
@@ -56,6 +59,7 @@ set shortmess+=I " Don't show the introduction of the VIM
 set statusline=%F%m%r%h%w\ %=\ [%l,\ %v]\  
 set background=dark
 set list lcs=tab:\|\ 
+let g:python_highlight_space_errors=0 " Stop highlight the trailing whitespace in python file
 let g:go_highlight_trailing_whitespace_error=0 " Stop hightlight the trailing whitespace in go file
 colorscheme gruvbox
 set expandtab
@@ -77,7 +81,7 @@ let g:coc_global_extensions = ['coc-java',
 			\'coc-markdownlint',
 			\'coc-html',
 			\'coc-tsserver',
-			\'coc-vetur',
+			\'@yaegassy/coc-volar',
 			\'coc-css']
 " Some servers have issues with backup files, see #649.
 set nobackup
