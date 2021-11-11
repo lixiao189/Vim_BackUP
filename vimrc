@@ -1,5 +1,5 @@
 " Speed up the Vim Plug
-let g:plug_url_format='https://git::@hub.fastgit.org/%s.git'
+" let g:plug_url_format='https://git::@hub.fastgit.org/%s.git'
 
 " Manage your plugins here
 call plug#begin('~/.vim/plugged')
@@ -38,6 +38,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 " The themes of the VIM
 Plug 'lifepillar/vim-solarized8'
 Plug 'morhetz/gruvbox'
+Plug 'joshdick/onedark.vim'
 call plug#end()
 
 
@@ -57,11 +58,12 @@ set cul
 set laststatus=2 
 set shortmess+=I " Don't show the introduction of the VIM
 set statusline=%F%m%r%h%w\ %=\ [%l,\ %v]\  
-set background=dark
 set list lcs=tab:\|\ 
 let g:python_highlight_space_errors=0 " Stop highlight the trailing whitespace in python file
 let g:go_highlight_trailing_whitespace_error=0 " Stop hightlight the trailing whitespace in go file
-colorscheme gruvbox
+let g:onedark_hide_endofbuffer=1
+let g:onedark_termcolors=16
+colorscheme onedark
 set expandtab
 " Some type of file need use tab to indent
 autocmd FileType go set noexpandtab 
