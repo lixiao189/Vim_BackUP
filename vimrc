@@ -47,6 +47,7 @@ syntax on
 " The settings of the VIM
 set nowrap " 禁止折行 
 let mapleader = "\<space>" " Use the <space> as the leader key
+set wildmenu " Show the autocompletion of VIM command line
 set tabstop=4 
 set softtabstop=4 
 set shiftwidth=4 
